@@ -5,4 +5,7 @@
   height: 100vh; /* Take full viewport height */
   background-color: #A7FFEB; /* Optional: background color for the App */
   border-radius: 1rem;
+  background-image: url('./src/assets/krzysztof-dubiel-hQBIJsBtyBw-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
 }
