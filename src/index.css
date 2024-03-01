@@ -15,11 +15,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
 }
 
 
 .team-card {
   display: flex;
+  flex: 0 1 calc(33.333% - 1rem);
   flex-direction: column;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,4 +61,42 @@
 .Title {
   color: white;
   text-align: center;
+}
+
+
+/* Base styles */
+.team-card {
+  width: 300px; /* Adjust based on your preference */
+  /* Other styles */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .team-card {
+    width: 100%; /* Make cards take full width on smaller screens */
+  }
+
+  .Main-Card, .Team-Card-Container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center;
+  }
+
+  .team-card-content, .team-card-button, .Title {
+    font-size: smaller; /* Adjust font size for readability on smaller screens */
+  }
+}
+
+
+/* For tablets and below */
+@media (max-width: 768px) {
+  .team-card {
+    flex: 0 1 calc(50% - 1rem); /* 2 cards in a row */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .team-card {
+    flex: 0 1 100%; /* 1 card takes full width */
+  }
 }
